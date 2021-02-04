@@ -7,6 +7,7 @@ const hogs = [
     'highest medal achieved': 'bronze'
   },
   {
+        
     name: 'Porkchop',
     specialty: 'Making friends',
     greased: true,
