@@ -70,9 +70,8 @@ function App() {
     <div className="App">
       <Nav />
       <Form handleAddHog={handleAddHog} handleAddImage={handleAddImage} /><br/>
-      <FilterSort hogs={hogData} findGreasedHogs={findGreasedHogs} sortHogsByName={sortHogsByName} sortHogsByWeight={sortHogsByWeight} />
+      <FilterSort findGreasedHogs={findGreasedHogs} sortHogsByName={sortHogsByName} sortHogsByWeight={sortHogsByWeight} />
       <HogList hogs={hogData} pigImages={pigImages} />
-      
     </div>
   );
 }

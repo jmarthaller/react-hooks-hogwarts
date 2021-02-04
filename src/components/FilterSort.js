@@ -1,9 +1,9 @@
 import React from 'react';
-import Hog from './Hog';
 
 
 
-function FilterSort({ hogs, sortHogsByWeight, sortHogsByName, findGreasedHogs }) {
+
+function FilterSort({ sortHogsByWeight, sortHogsByName, findGreasedHogs }) {
 
     function handleButtonClick(e) {
         if (e.target.name === 'greased') {

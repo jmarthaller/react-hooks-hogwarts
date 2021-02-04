@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import truffle_shuffle from "../assets/truffle_shuffle.jpg";
+
 
 
 function Hog({ name, specialty, greased, weight, medalAchieved, pigImages }) {
+
     
     const [isFlipped, setIsFlipped] = useState(false)
     const [isHidden, setIsHidden] = useState(false);
