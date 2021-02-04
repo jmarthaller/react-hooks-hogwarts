@@ -14,6 +14,7 @@ import trouble from "../assets/trouble.jpg";
 import truffle_shuffle from "../assets/truffle_shuffle.jpg";
 import HogList from './HogList';
 import FilterSort from './FilterSort';
+import Form from "./Form"
 
 import hogs from "../porkers_data";
 
@@ -34,8 +35,22 @@ function App() {
     'Trouble': trouble,
     'Truffle Shuffle': truffle_shuffle
   }
+
+
+  function handleAddHog(newHog) {
+    const newHogs = [...hogs, newHog]
+    setHogData(newHogs)
+  }
+
+  function handleAddImage(newImage) {
+    console.log(newImage)
+    console.log(pigImages)
+    const newImages = {...pigImages, newImage }
+    setHogImages((hogImages) => hogImages = newImages)
+  }
   
   const [hogData, setHogData] = useState(hogs)
+  const [hogImages, setHogImages] = useState(pigImages)
 
   function findGreasedHogs() {
     setHogData(hogs.filter((hog) => {
@@ -54,6 +69,7 @@ function App() {
   return (   
     <div className="App">
       <Nav />
+      <Form handleAddHog={handleAddHog} handleAddImage={handleAddImage} /><br/>
       <FilterSort hogs={hogData} findGreasedHogs={findGreasedHogs} sortHogsByName={sortHogsByName} sortHogsByWeight={sortHogsByWeight} />
       <HogList hogs={hogData} pigImages={pigImages} />
       
